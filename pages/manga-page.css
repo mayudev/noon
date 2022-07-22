@@ -23,18 +23,10 @@ box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.219)
 .sidepanel a{color: white}
 .sidepanel a:hover{color:#F999B7}
 
-.toppanel{
-    position: absolute;
-    left: 50px;
-    top:0;
-
-    width: calc(100% - 50px);
-    height: 50px;
-}
-
-.toppanel #manga-name{
+#manga-name{
     position: relative;
-    left: 20px;
+    top: 20px;
+    left: 70px;
     background-color: #F9C5D5;
     color: #db0a5b;
     width:fit-content;
@@ -42,11 +34,11 @@ box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.219)
 
     padding-left: 10px;padding-right: 10px;
 
-    border-radius:5px;
+    border-radius:10px;
     box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.200)
 
 }
-.toppanel #manga-name #name{font-size:120%;}
+#manga-name #name{font-size:30px;padding:0;margin:0;}
 
 .page{margin-left: 50px;margin-top: 70px;margin-right: 0;}
 
