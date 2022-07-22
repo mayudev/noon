@@ -6,6 +6,7 @@ const BASE_PATH = "https://api.mangadex.org";
 
 export async function apiRequest<T>(path: string): Promise<MangaDexResponse<T>> {
   try {
+    console.log(decodeURIComponent(BASE_PATH + path));
     const request = await get(BASE_PATH + path);
 
     if (request.status != 200) {

@@ -12,6 +12,11 @@ type MangaDexResponse<T> = {
   response?: string;
   data?: T;
   errors?: MangaDexRequestError;
+
+  // Pagination
+  limit?: number;
+  offset?: number;
+  total?: number;
 };
 
 export default MangaDexResponse;

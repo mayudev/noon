@@ -1,4 +1,4 @@
-import { LocalizedString, PublicationStatus, Relationship } from "./misc";
+import { Entity, LocalizedString, PublicationStatus, Relationship } from "./misc";
 import { Tag } from "./tag";
 
 export interface Manga {
@@ -8,7 +8,7 @@ export interface Manga {
   relationships: Relationship[];
 }
 
-export interface MangaAttributes {
+export interface MangaAttributes extends Entity {
   title: LocalizedString;
   altTitles: LocalizedString[];
   description: LocalizedString;
@@ -22,7 +22,4 @@ export interface MangaAttributes {
   status: PublicationStatus;
 
   tags: Tag[];
-
-  createdAt: string;
-  updatedAt: string;
 }

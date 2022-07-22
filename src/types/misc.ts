@@ -14,3 +14,8 @@ export interface Relationship {
 export interface CoverArtAttributes {
   fileName: string;
 }
+
+export interface Entity {
+  createdAt: string;
+  updatedAt: string;
+}

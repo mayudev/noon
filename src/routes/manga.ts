@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import getMangaFeed from "../api/feed";
 import { apiRequest } from "../helpers/api";
 import { findCoverURL } from "../helpers/covers";
 import { paths } from "../helpers/paths";
@@ -14,18 +15,27 @@ export class MangaRoute extends Route {
 
     try {
       const details = await apiRequest<Manga>(
-        paths.mangaDetails.with(id, "includes[]=cover_art")
+        paths.mangaDetails.with(id, {
+          includes: ["cover_art"],
+        })
       );
 
       const cover = findCoverURL(details.data!);
 
-      console.log(cover);
-
-      const respString = `
+      let respString = `
       <b>a</b>
   <img src=${cover} width="320" />
 Manga title: ${details.data?.attributes.title.en};
       Tags: ${details.data?.attributes.tags.map((tag) => tag.attributes.name.en)}`;
+
+      const feed = await getMangaFeed(id);
+
+      respString += "<ul>";
+
+      feed.data?.forEach((entry) => {
+        respString += `<li>${entry.attributes.chapter} ${entry.attributes.translatedLanguage} ${entry.attributes.title}</li>`;
+      });
+      respString += "</ul>";
 
       return res.send(respString);
     } catch (e) {
