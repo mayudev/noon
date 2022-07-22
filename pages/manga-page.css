@@ -42,4 +42,6 @@ box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.219)
 
 .page{margin-left: 50px;margin-top: 70px;margin-right: 0;}
 
-.manga-reader #reader{width: 35%;}
+.manga-info #info-list{display: inline;}
+.manga-info{margin-left: 20px;}
+.manga-info #cover{width: 450px; border-radius: 10px;}
