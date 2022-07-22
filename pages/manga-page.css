@@ -19,7 +19,7 @@ background-color: #F9C5D5;
 box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.219)
 
 }
-.sidepanel #home{margin-top: 10px;}
+.sidepanel #home, .sidepanel #search{margin-top: 20px;}
 .sidepanel a{color: white}
 .sidepanel a:hover{color:#F999B7}
 
@@ -32,7 +32,7 @@ box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.219)
     width:fit-content;
     height: fit-content;
 
-    padding-left: 10px;padding-right: 10px;
+    padding-left: 10px;padding-right: 10px;padding-top:2px;
 
     border-radius:10px;
     box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.200)
@@ -40,8 +40,22 @@ box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.219)
 }
 #manga-name #name{font-size:30px;padding:0;margin:0;}
 
-.page{margin-left: 50px;margin-top: 70px;margin-right: 0;}
+.page{margin-left: 50px;margin-top: 45px;margin-right: 0;}
 
-.manga-info #info-list{display: inline;}
-.manga-info{margin-left: 20px;}
-.manga-info #cover{width: 450px; border-radius: 10px;}
+.manga-info{flex-shrink: 0;margin-bottom:10px;margin-left: 20px;width:500px;height:820px;background-color: white;text-align: center;border-radius: 10px}
+.manga-info #cover{width: 450px;margin-top:25px; border-radius: 10px;box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.200)}
+
+.manga-desc{
+    position: absolute;
+    left: 600px;
+    top:81px;
+
+    height:300px;
+    width:auto;
+
+    margin-right: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+
+}
