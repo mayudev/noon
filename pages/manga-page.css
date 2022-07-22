@@ -1,12 +1,53 @@
-body{background-color: #FEE3EC;}
+@import url('https://fonts.googleapis.com/css2?family=Fresca&display=swap');
+body{background-color: #FEE3EC;margin:0;padding:0;font-family: 'Fresca', sans-serif;}
 
 .sidepanel{
-    position: absolute;
-    left:0;
-    top:0;
-    width:50px;
-    height: 100%;
-    
-    background-color: #F9C5D5;
-    box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.220);
+position: fixed;
+left: 0;
+top : 0;
+
+padding: 0;
+
+height: 100vh;
+width: 50px;
+
+text-align: center;
+font-size: 30px;
+
+background-color: #F9C5D5;
+
+box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.219)
+
 }
+.sidepanel #home{margin-top: 10px;}
+.sidepanel a{color: white}
+.sidepanel a:hover{color:#F999B7}
+
+.toppanel{
+    position: absolute;
+    left: 50px;
+    top:0;
+
+    width: calc(100% - 50px);
+    height: 50px;
+}
+
+.toppanel #manga-name{
+    position: relative;
+    left: 20px;
+    background-color: #F9C5D5;
+    color: #db0a5b;
+    width:fit-content;
+    height: fit-content;
+
+    padding-left: 10px;padding-right: 10px;
+
+    border-radius:5px;
+    box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.200)
+
+}
+.toppanel #manga-name #name{font-size:120%;}
+
+.page{margin-left: 50px;margin-top: 70px;margin-right: 0;}
+
+.manga-reader #reader{width: 35%;}
