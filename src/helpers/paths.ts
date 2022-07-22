@@ -7,30 +7,13 @@ export class Path {
     this.path = path;
   }
 
-  with(param: string, qs: object) {
+  with(param: string, qs: object, subpath?: string) {
     const params = stringify(qs);
 
-    return this.path + "/" + param + "?" + params;
-  }
-}
-
-export class Subpath extends Path {
-  subpath: string;
-
-  constructor(path: string, subpath: string) {
-    super(path);
-
-    this.subpath = subpath;
-  }
-
-  with(param: string, qs: object) {
-    const params = stringify(qs);
-
-    return this.path + "/" + param + this.subpath + "?" + params;
+    return this.path + "/" + param + (subpath ?? "") + "?" + params;
   }
 }
 
 export const paths = {
   mangaDetails: new Path("/manga"),
-  mangaFeed: new Subpath("/manga", "/feed"),
 };

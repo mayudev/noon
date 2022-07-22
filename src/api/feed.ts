@@ -4,11 +4,15 @@ import { Chapter } from "../types/chapter";
 
 export default async function getMangaFeed(id: string) {
   const feed = await apiRequest<Chapter[]>(
-    paths.mangaFeed.with(id, {
-      order: {
-        chapter: "desc",
+    paths.mangaDetails.with(
+      id,
+      {
+        order: {
+          chapter: "desc",
+        },
       },
-    })
+      "/feed"
+    )
   );
 
   return feed;
