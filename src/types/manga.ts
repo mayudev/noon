@@ -1,4 +1,12 @@
-import { Entity, LocalizedString, PublicationStatus, Relationship } from "./misc";
+import {
+  ContentRating,
+  Entity,
+  LocalizedString,
+  PublicationDemographic,
+  PublicationStatus,
+  Relationship,
+  State,
+} from "./misc";
 import { Tag } from "./tag";
 
 export interface Manga {
@@ -13,13 +21,24 @@ export interface MangaAttributes extends Entity {
   altTitles: LocalizedString[];
   description: LocalizedString;
 
+  isLocked: boolean;
+  // links
+
   originalLanguage: string;
 
   lastVolume: string;
   lastChapter: string;
 
-  year: number;
+  publicationDemographic: PublicationDemographic;
   status: PublicationStatus;
+  year: number | null;
+  contentRating: ContentRating;
+
+  chapterNumbersResetOnNewVolume: boolean;
+  availableTranslatedLanguages: string[];
 
   tags: Tag[];
+  state: State;
+
+  version: number;
 }
