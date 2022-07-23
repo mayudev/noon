@@ -2,7 +2,7 @@
 
 body{
     /* background-color: #FEE3EC; */
-    background-color: white;
+    background-color: #fff6f9;
     margin:0;
     padding: 0;
 
@@ -47,7 +47,7 @@ body{
     display: flex;
     flex-direction: column;
 
-    width:700px;
+    max-width:700px;
     margin: auto;
     padding-left: 15px;padding-right: 15px;
 }
@@ -72,13 +72,19 @@ body{
 
 .manga-info .info #name{
     font-size: 20px;
-    line-height: 0;
+    line-height: 22px;
 
     font-weight: bold;
 }
 
 .manga-info .info #author{
     font-weight:800;
+}
+
+.sinopsys #title-of-section{
+    font-size: 20px;
+    font-weight: bold;
+
 }
 
 .chapter-list{
@@ -105,4 +111,16 @@ body{
 
 #chapter-element #read:hover{
     color: #A10035;
+}
+
+.chapter-info{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    line-height:16px;
+}
+
+.chapter-info #date-n-upload{
+    margin-top:0;
+    font-size: 12px;
 }
