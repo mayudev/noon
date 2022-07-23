@@ -1,35 +1,46 @@
 <html>
     <head>
-        <link rel="stylesheet" href="manga-page.css">
         <link href="../assets/fontawesome/fonts/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="manga-page.css">
     </head>
-    
+
     <body>
 
-        <div class="sidepanel">
-            <a href="sbu"><i class="fa-solid fa-house" id="home"></i></a>
-            <a href="sbu"><i class="fa-solid fa-search" id="search"></i></a>
-        </div>
+        <div class="topbar">
+            <div id="icons">
+                <a href="sbu"><i class="fa-solid fa-house" id="item"></i></a>
+                <a href="sbu"><i class="fa-solid fa-code" id="item"></i></a>
+            </div>
 
-        <div id="manga-name"><p id="name">Onii-chan wa oshimai</p></div>
+            <div id="manga-actions">
+                <a href="sbu"><i class="fa-solid fa-download" id="item"></i></a>
+            </div>
+
+        </div>
 
         <div class="page">
             <div class="manga-info">
                 <img src="../assets/manga-try/1.png" id="cover">
-
-                <ul id="info-list">
-                    <li>
-                        rating: something
-                    </li>
-                </ul>
-
+                <div class="info">
+                    <p id="name">Oniichan wa oshimai!</p>
+                    <p id="author">Nekotoufu</p>
+                    <p id="status">Ongoing</p>
+                </div>
             </div>
 
-            <div class="manga-desc">
-                <p>Mahiro Oyama was just a normal erotic-game loving dude…until he woke up one morning as a woman! Turns out his mad-scientist little sister, Mihari, tried out one of her new experiments on him…with a disastrous outcome, as far as Mahiro’s concerned! But Mihari is as determined to study him as he is determined to go back to his shut-in, game-playing life, and one thing’s for sure…life is going to get a whole lot weirder from here on out! </p>
+            <div class="chapter-list">
+                <p id="chapter-num">105 chapters</p>
+                <hr>
+                
+                <div class="chapters">
+                    <div id="chapter-element"><p>vol 1 - blah blah mahiro dropkicks her sister because she sucks</p><a href="sus" id="read"><i class="fa-solid fa-book"></i></a></div>
+                </div>
             </div>
+
         </div>
 
-    </body>
 
+
+
+    </body>
 </html>

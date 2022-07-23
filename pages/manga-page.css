@@ -1,61 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Fresca&display=swap');
-body{background-color: #FEE3EC;margin:0;padding:0;font-family: 'Fresca', sans-serif;}
+@font-face { font-family: "Ubuntu"; src: url("../assets/fonts/ubuntu/Ubuntu/Ubuntu-Regular.ttf")}
 
-.sidepanel{
-position: fixed;
-left: 0;
-top : 0;
-
-padding: 0;
-
-height: 100vh;
-width: 50px;
-
-text-align: center;
-font-size: 25px;
-
-background-color: #F9C5D5;
-
-box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.219)
-
-}
-.sidepanel #home, .sidepanel #search{margin-top: 20px;}
-.sidepanel a{color: white}
-.sidepanel a:hover{color:#F999B7}
-
-#manga-name{
-    position: relative;
-    top: 20px;
-    left: 70px;
-    background-color: #F9C5D5;
-    color: #db0a5b;
-    width:fit-content;
-    height: fit-content;
-
-    padding-left: 10px;padding-right: 10px;padding-top:2px;
-
-    border-radius:10px;
-    box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.200)
-
-}
-#manga-name #name{font-size:30px;padding:0;margin:0;}
-
-.page{margin-left: 50px;margin-top: 45px;margin-right: 0;}
-
-.manga-info{flex-shrink: 0;margin-bottom:10px;margin-left: 20px;width:500px;height:820px;background-color: white;text-align: center;border-radius: 10px}
-.manga-info #cover{width: 450px;margin-top:25px; border-radius: 10px;box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.200)}
-
-.manga-desc{
-    position: absolute;
-    left: 600px;
-    top:81px;
-
-    height:300px;
-    width:auto;
-
-    margin-right: 15px;
-    padding: 10px;
+body{
+    /* background-color: #FEE3EC; */
     background-color: white;
-    border-radius: 10px;
+    margin:0;
+    padding: 0;
 
+    font-family: Ubuntu;
+
+}
+
+.topbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 25px;
+
+    height: 50px;
+    background-color: #f9c5d47a;
+
+    margin-bottom: 15px;
+
+}
+
+.topbar a{
+    color: #A10035;
+}
+.topbar a:hover{
+    color: white;
+}
+
+.topbar #icons{
+    margin-left:15px;
+}
+
+.topbar #icons #item, .topbar #manga-actions #item{
+    margin-left: 10px;margin-right: 10px;
+}
+
+.topbar #manga-actions{
+    margin-right: 15px;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+
+    width:700px;
+    margin: auto;
+    padding-left: 15px;padding-right: 15px;
+}
+
+.manga-info{
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+
+}
+
+.manga-info #cover{
+    height:300px;
+
+    border-radius: 15px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+}
+
+.manga-info .info{
+    margin-left: 15px;
+}
+
+.manga-info .info #name{
+    font-size: 20px;
+    line-height: 0;
+
+    font-weight: bold;
+}
+
+.manga-info .info #author{
+    font-weight:800;
+}
+
+.chapter-list{
+    width:100%;
+}
+
+.chapters{
+    margin-left:15px;
+    margin-right: 15px;
+}
+
+#chapter-element{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+#chapter-element #read{
+    font-size: 20px;
+    color: gray;
+}
+
+#chapter-element #read:hover{
+    color: #A10035;
 }
