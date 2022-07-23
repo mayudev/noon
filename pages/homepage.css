@@ -1,0 +1,19 @@
+.manga-grid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.manga-section #section-title{
+    font-size: 20px;
+    line-height: 22px;
+}
+.manga-card{
+    flex-basis: 150px;
+}
+.manga-card img{
+    width:150px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+}
