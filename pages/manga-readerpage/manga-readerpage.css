@@ -9,7 +9,27 @@
     font-weight: bold;
 }
 
+hr{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.previous-next{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom: 10px;
+}
+
+.previous-next a{
+    text-decoration: none;
+    color: black
+}
+.previous-next a:hover{
+    color: #A10035;
+}
+
 .reader img{
+    border-radius: 5px;
     width:100%;
     margin-bottom: 10px;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
