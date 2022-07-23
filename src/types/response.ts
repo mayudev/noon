@@ -1,3 +1,5 @@
+import { Images } from "./images";
+
 type MangaDexResult = "ok" | "error";
 
 type MangaDexRequestError = {
@@ -17,6 +19,12 @@ type MangaDexResponse<T> = {
   limit?: number;
   offset?: number;
   total?: number;
+};
+
+export type MangaDexImagesResponse = {
+  result: MangaDexResult;
+  baseUrl: string;
+  chapter: Images;
 };
 
 export default MangaDexResponse;

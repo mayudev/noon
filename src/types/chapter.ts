@@ -13,8 +13,8 @@ export interface ChapterAttributes extends Entity {
   chapter: string;
   pages: number;
   translatedLanguage: string;
-  uploader: string;
-  externalUrl: string;
+  uploader?: string;
+  externalUrl: string | null;
 
   publishAt: string;
   readableAt: string;

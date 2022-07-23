@@ -16,4 +16,6 @@ export class Path {
 
 export const paths = {
   mangaDetails: new Path("/manga"),
+  chapterDetails: new Path("/chapter"),
+  chapterImages: new Path("/at-home/server"),
 };

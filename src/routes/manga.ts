@@ -33,7 +33,9 @@ Manga title: ${details.data?.attributes.title.en};
       respString += "<ul>";
 
       feed.data?.forEach((entry) => {
-        respString += `<li>${entry.attributes.chapter} ${entry.attributes.translatedLanguage} ${entry.attributes.title}</li>`;
+        respString += `<li>
+        <a href="/chapter/${entry.id}">${entry.attributes.chapter}</a> ${entry.attributes.translatedLanguage} ${entry.attributes.title}
+        </li>`;
       });
       respString += "</ul>";
 

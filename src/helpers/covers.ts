@@ -1,12 +1,13 @@
 import { Manga } from "../types/manga";
+import { CoverArtAttributes } from "../types/misc";
 
 export function findCoverFilename(manga: Manga): string | null {
   const artRelationship = manga.relationships.find(
     (relationship) => relationship.type === "cover_art"
   );
 
-  if (artRelationship && artRelationship.attributes)
-    return artRelationship.attributes.fileName;
+  if (artRelationship?.attributes)
+    return (artRelationship.attributes as CoverArtAttributes).fileName;
   else return null;
 }
 

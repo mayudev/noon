@@ -1,3 +1,5 @@
+import { MangaAttributes } from "./manga";
+
 export interface LocalizedString {
   en: string;
 }
@@ -14,7 +16,7 @@ export interface Relationship {
   id: string;
   type: string | "cover_art";
   related?: string;
-  attributes?: CoverArtAttributes;
+  attributes?: CoverArtAttributes | MangaAttributes;
 }
 
 export interface CoverArtAttributes {
